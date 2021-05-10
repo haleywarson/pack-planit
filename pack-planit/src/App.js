@@ -18,7 +18,7 @@ const toggleActive = (e) => {
     <Router>
       <div>
         <header>
-          <h1 className="title">Trip Planit</h1>
+          <h1 className="title">Pack Planit</h1>
           <button className="menu-btn active" onClick={toggleActive}>
             <span className="menu-line"></span>
             <span className="menu-line"></span>
@@ -51,7 +51,7 @@ const toggleActive = (e) => {
           </Switch>
         </main>
 
-        <footer>Copyright 2021 Pack Planit. All rights reserved.</footer>
+        <footer><p>Copyright 2021 Pack Planit. All rights reserved.</p></footer>
       </div>
     </Router>
   );

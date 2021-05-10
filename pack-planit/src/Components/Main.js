@@ -9,9 +9,9 @@ export default function Main() {
         <div className="main">
             <div className="main-container">
                 <div className="main-content">
-                    <h2>Adventure Awaits</h2>
-                    <h3>Your next trip is waiting for you... time to plan it.</h3>
-                    <button>Plan your trip</button>
+                    <h2>ADVENTURE AWAITS</h2>
+                    <h3>Your next camping trip is waiting for you...time to plan it.</h3>
+                    <button>PLAN YOUR TRIP</button>
                 </div>
             </div>
             <div className="trips-container">

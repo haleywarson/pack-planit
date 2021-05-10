@@ -6,7 +6,7 @@ export default function TripCard() {
     return (
         <div className="trip-card">
             <p>Name</p>
-            <img></img>
+            <img alt="Trip"></img>
             <p>Location: </p>
             <p>Dates: </p>
             <p>Type: </p>

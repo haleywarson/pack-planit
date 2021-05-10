@@ -1,13 +1,15 @@
 /* || Header & Nav */
 header {
   background-color: rgb(242, 242, 242);
-  height: 4rem;
+  height: 2em;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-family: 'Unica One', cursive;
+  font-size: 2rem;
 }
 
 .nav-menu {
@@ -70,29 +72,37 @@ header {
     background-position: center;
     background-attachment: fixed;
     width: 100%;
-    height: 85vh;
+    height: 75vh;
 }
 
 .main-content {
     display: flex-start;
     flex-direction: column;
-    background-color: white;
-    margin: 1rem;
-    padding: 1rem;
-    height: 30vh;
-    box-shadow: 2px 2px 3px rgba(206, 205, 205, 0.582);
+    margin: 1em;
+    padding: 1em;
+    max-height: 50%;
+    max-width: 35%;
 }
 
 .main-content h2 {
-  font-size: 4rem;
+  font-size: 6rem;
+  font-family: 'Unica One', cursive;
+  padding-bottom: .3em;
+  color: white;
+  text-shadow: 2px 2px #5e5d5d;
 }
 
 .main-content h3 {
-  font-size: 1.75rem;
+  font-size: 2.5rem;
+  font-family: 'Crimson Text', serif;
+  padding-bottom: 1em;
+  color: white;
+  text-shadow: 1px 1px #5e5d5d;
 }
 
 .main-content button {
-  font-size: 1rem;
+  font-size: 2rem;
+  font-family: 'Unica One', cursive;
 }
 
 
@@ -102,15 +112,18 @@ header {
   justify-content: left;
   background-color: rgb(242, 242, 242);
   width: 100%;
-  height: 85vh;
+  height: 75vh;
 }
 
 .trips h2 {
   font-size: 3rem;
+  padding: 1em;
+  font-family: 'Unica One', cursive;
 }
 
 .trips h3 {
   font-size: 1.5rem;
+  font-family: 'Crimson Text', serif;
 }
 
 .trips-filter {
@@ -124,8 +137,8 @@ header {
   flex-direction: column;
   background-color: white;
   justify-content: space-between;
-  margin: 1rem;
-  padding: 1rem;
+  margin: 1em;
+  padding: 1em;
   box-shadow: 2px 2px 3px rgba(206, 205, 205, 0.582);
 }
 
@@ -134,8 +147,8 @@ header {
   flex-direction: column;
   background-color: white;
   justify-content: space-between;
-  margin: 1rem;
-  padding: 1rem;
+  margin: 1em;
+  padding: 1em;
   box-shadow: 2px 2px 3px rgba(206, 205, 205, 0.582);
 }
 
@@ -148,9 +161,10 @@ header {
   max-width: 25em;
   flex-grow: 1;
   flex-basis: 25em;
-  margin: 1rem;
-  padding: .5rem;
+  margin: 1em;
+  padding: 1em;
   box-shadow: 2px 2px 3px rgba(206, 205, 205, 0.582);
+  font-family: 'Crimson Text', serif;
 }
 
 /* || Plan Page */
@@ -164,28 +178,40 @@ header {
     background-position: center;
     background-attachment: fixed;
     width: 100%;
-    height: 85vh;
+    height: 75vh;
+}
+
+.plan-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  max-width: 25em;
+  flex-grow: 1;
+  flex-basis: 25em;
+  margin: 1em;
+  padding: 1em;
+  box-shadow: 2px 2px 3px rgba(206, 205, 205, 0.582);
+  font-family: 'Crimson Text', serif;
 }
 
 /* || Footer */
 footer {
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  box-shadow: 2px -1px 3px rgba(206, 205, 205, 0.582);
-  background-color: white;
-    height: 3rem;
+    position: fixed;
+    bottom: 0;
+    box-shadow: 2px -1px 3px rgba(206, 205, 205, 0.582);
+    background-color: white;
+    height: 2.5em;
     width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 footer p {
-    padding: 1rem;
-    font-size: 1rem;
-    color: black;
-    font-size: 2rem;
+  color: black;
+  font-size: 1rem;
+  font-family: 'Crimson Text', serif;
 }
