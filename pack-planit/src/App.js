@@ -7,18 +7,34 @@ import Plan from "./Components/Plan"
 import Main from "./Components/Main"
 
 function App() {
+
+const toggleActive = (e) => {
+  e.preventDefault();
+  // menu-btn.active.classList.toggle("active"); 
+  // nav-menu.classList.toggle("active"); 
+}
+
   return (
     <Router>
       <div>
-
         <header>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Main</Link>
+          <h1 className="title">Trip Planit</h1>
+          <button className="menu-btn active" onClick={toggleActive}>
+            <span className="menu-line"></span>
+            <span className="menu-line"></span>
+            <span className="menu-line"></span>
+          </button>
+          <nav className="nav-menu" onClick={toggleActive}>
+            <ul className="nav-list">
+              <li className="nav-item">
+                <Link to="/" className="nav-link">
+                  Main
+                </Link>
               </li>
-              <li>
-                <Link to="/plan">Plan your trip</Link>
+              <li className="nav-item">
+                <Link to="/plan" className="nav-link">
+                  Plan your trip
+                </Link>
               </li>
             </ul>
           </nav>
@@ -35,7 +51,7 @@ function App() {
           </Switch>
         </main>
 
-        <footer>Footer</footer>
+        <footer>Copyright 2021 Pack Planit. All rights reserved.</footer>
       </div>
     </Router>
   );

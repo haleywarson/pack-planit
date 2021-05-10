@@ -1,5 +1,65 @@
-/* || Main Page */
+/* || Header & Nav */
+header {
+  background-color: rgb(242, 242, 242);
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 
+.nav-menu {
+  visibility: hidden;
+}
+
+.nav-menu.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f4f4;
+  position: absolute;
+  top: 0;
+  right: 0;
+  visibility: visible;
+  width: 15rem;
+  height: 100%;
+}
+
+.menu-btn {
+  width: 3rem;
+  height: 3rem;
+  visibility: hidden;
+}
+
+.menu-btn.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: unset;
+  background: transparent;
+  height: 3rem;
+  visibility: visible;
+}
+
+.menu-line {
+  background: white;
+  border: 1px solid white;
+  height: 5px;
+  width: 100%;
+}
+
+.nav-item {
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+}
+
+/* || Main Section */
 .main-container {
     display: flex;
     align-items: center;
@@ -23,38 +83,104 @@
     box-shadow: 2px 2px 3px rgba(206, 205, 205, 0.582);
 }
 
+.main-content h2 {
+  font-size: 4rem;
+}
+
+.main-content h3 {
+  font-size: 1.75rem;
+}
+
+.main-content button {
+  font-size: 1rem;
+}
+
+
+/* || Trips Section */
 .trips-container {
+  display: flex;
+  justify-content: left;
+  background-color: rgb(242, 242, 242);
+  width: 100%;
+  height: 85vh;
+}
+
+.trips h2 {
+  font-size: 3rem;
+}
+
+.trips h3 {
+  font-size: 1.5rem;
+}
+
+.trips-filter {
+  display: flex;
+  justify-content: left;
+  background-color: rgb(242, 242, 242);
+  
+}
+.trips-upcoming-title {
+  display: flex-start;
+  flex-direction: column;
+  background-color: white;
+  justify-content: space-between;
+  margin: 1rem;
+  padding: 1rem;
+  box-shadow: 2px 2px 3px rgba(206, 205, 205, 0.582);
+}
+
+.trips-past-title {
+  display: flex-start;
+  flex-direction: column;
+  background-color: white;
+  justify-content: space-between;
+  margin: 1rem;
+  padding: 1rem;
+  box-shadow: 2px 2px 3px rgba(206, 205, 205, 0.582);
+}
+
+.trip-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  max-width: 25em;
+  flex-grow: 1;
+  flex-basis: 25em;
+  margin: 1rem;
+  padding: .5rem;
+  box-shadow: 2px 2px 3px rgba(206, 205, 205, 0.582);
+}
+
+/* || Plan Page */
+.plan-container {
     display: flex;
+    align-items: center;
     justify-content: left;
-    background-color: rgb(242, 242, 242);
+    background-image: url("https://images.unsplash.com/photo-1584974292709-5c2f0619971b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     width: 100%;
     height: 85vh;
 }
 
-.trip-card {
+/* || Footer */
+footer {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  box-shadow: 2px -1px 3px rgba(206, 205, 205, 0.582);
+  background-color: white;
+    height: 3rem;
+    width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
-    max-width: 25em;
-    flex-grow: 1;
-    flex-basis: 25em;
-    margin: 1rem;
-    padding: .5rem;
-    box-shadow: 2px 2px 3px rgba(206, 205, 205, 0.582);
-}
-
-/* || Footer */
-
-footer {
-    height: 3em;
-    text-align: center;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    box-shadow: 2px -1px 3px rgba(206, 205, 205, 0.582);
-    background-color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 footer p {
@@ -62,13 +188,4 @@ footer p {
     font-size: 1rem;
     color: black;
     font-size: 2rem;
-    text-decoration: none;
-}
-
-footer a {
-    padding: 1rem;
-    font-size: 1rem;
-    color: black;
-    font-size: 2rem;
-    text-decoration: none;
 }
