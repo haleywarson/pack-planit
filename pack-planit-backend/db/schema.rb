@@ -15,6 +15,8 @@ ActiveRecord::Schema.define(version: 2021_05_11_185028) do
   create_table "packing_lists", force: :cascade do |t|
     t.string "name"
     t.string "list"
+    t.integer "trip_id"
+    t.index ["trip_id"], name: "index_packing_lists_on_trip_id"
   end
 
   create_table "trips", force: :cascade do |t|
