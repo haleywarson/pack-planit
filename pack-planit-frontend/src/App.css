@@ -1,0 +1,227 @@
+/* || Header & Nav */
+header {
+  background-color: rgb(242, 242, 242);
+  height: 2em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-family: 'Unica One', cursive;
+  font-size: 2rem;
+}
+
+.nav-menu {
+  visibility: hidden;
+}
+
+.nav-menu.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f4f4;
+  position: absolute;
+  top: 0;
+  right: 0;
+  visibility: visible;
+  width: 15rem;
+  height: 100%;
+}
+
+.menu-btn {
+  width: 3rem;
+  height: 3rem;
+  visibility: hidden;
+}
+
+.menu-btn.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: unset;
+  background: transparent;
+  height: 3rem;
+  visibility: visible;
+}
+
+.menu-line {
+  background: white;
+  border: 1px solid white;
+  height: 5px;
+  width: 100%;
+}
+
+.nav-item {
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+}
+
+/* || Main Section */
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-image: url("https://images.unsplash.com/photo-1584974292709-5c2f0619971b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 75vh;
+}
+
+.main-content {
+    display: flex-start;
+    flex-direction: column;
+    margin: 1em;
+    padding: 1em;
+    max-height: 50%;
+    max-width: 35%;
+}
+
+.main-content h2 {
+  font-size: 6rem;
+  font-family: 'Unica One', cursive;
+  padding-bottom: .3em;
+  color: white;
+  text-shadow: 2px 2px #5e5d5d;
+}
+
+.main-content h3 {
+  font-size: 2.5rem;
+  font-family: 'Crimson Text', serif;
+  padding-bottom: 1em;
+  color: white;
+  text-shadow: 1px 1px #5e5d5d;
+}
+
+.main-content button {
+  font-size: 2rem;
+  font-family: 'Unica One', cursive;
+}
+
+
+/* || Trips Section */
+.trips-container {
+  display: flex;
+  justify-content: left;
+  background-color: rgb(242, 242, 242);
+  width: 100%;
+  height: 75vh;
+}
+
+.trips h2 {
+  font-size: 3rem;
+  padding: 1em;
+  font-family: 'Unica One', cursive;
+}
+
+.trips h3 {
+  font-size: 1.5rem;
+  font-family: 'Crimson Text', serif;
+}
+
+.trips-filter {
+  display: flex;
+  justify-content: left;
+  background-color: rgb(242, 242, 242);
+  
+}
+.trips-upcoming-title {
+  display: flex-start;
+  flex-direction: column;
+  background-color: white;
+  justify-content: space-between;
+  margin: 1em;
+  padding: 1em;
+  box-shadow: 2px 2px 3px rgba(206, 205, 205, 0.582);
+}
+
+.trips-past-title {
+  display: flex-start;
+  flex-direction: column;
+  background-color: white;
+  justify-content: space-between;
+  margin: 1em;
+  padding: 1em;
+  box-shadow: 2px 2px 3px rgba(206, 205, 205, 0.582);
+}
+
+.trip-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  max-width: 25em;
+  flex-grow: 1;
+  flex-basis: 25em;
+  margin: 1em;
+  padding: 1em;
+  box-shadow: 2px 2px 3px rgba(206, 205, 205, 0.582);
+  font-family: 'Crimson Text', serif;
+}
+
+/* || Plan Page */
+.plan-container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-image: url("https://images.unsplash.com/photo-1584974292709-5c2f0619971b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 75vh;
+}
+
+.plan-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  max-width: 25em;
+  flex-grow: 1;
+  flex-basis: 25em;
+  margin: 1em;
+  padding: 1em;
+  box-shadow: 2px 2px 3px rgba(206, 205, 205, 0.582);
+  font-family: 'Crimson Text', serif;
+}
+
+/* || Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    box-shadow: 2px -1px 3px rgba(206, 205, 205, 0.582);
+    background-color: white;
+    height: 2.5em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+footer p {
+  color: black;
+  font-size: 1rem;
+  font-family: 'Crimson Text', serif;
+}
+
+/* || Colors */
+
+/* 
+#5A58A6 bright purple
+#656FA6 muted purple
+#B4C8D9 light grey
+#049DBF teal
+#9FBFAA muted green 
+*/
