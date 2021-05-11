@@ -10,17 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_11_014514) do
+ActiveRecord::Schema.define(version: 2021_05_11_185028) do
+
+  create_table "packing_lists", force: :cascade do |t|
+    t.string "name"
+    t.string "list"
+  end
 
   create_table "trips", force: :cascade do |t|
     t.string "name"
     t.string "location"
+    t.string "image"
     t.date "start_date"
     t.date "end_date"
     t.string "category"
-    t.integer "length"
+    t.integer "miles"
     t.string "difficulty"
     t.integer "rating"
+    t.string "notes"
   end
 
 end
