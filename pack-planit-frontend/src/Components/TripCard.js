@@ -5,8 +5,8 @@ import "../App.css";
 export default function TripCard(props) {
     return (
         <div className="trip-card">
-            <p>Name: {props.name}</p>
             <img alt="Trip" src={props.image}></img>
+            <p>{props.name}</p>
             <p>Location: {props.location}</p>
             <p>Start date: {props.startDate}</p>
             <p>End date: {props.endDate}</p>
