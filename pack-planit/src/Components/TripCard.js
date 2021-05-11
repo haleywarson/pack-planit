@@ -2,17 +2,18 @@ import React from 'react'
 
 import "../App.css";
 
-export default function TripCard() {
+export default function TripCard(props) {
     return (
         <div className="trip-card">
-            <p>Name</p>
+            <p>Name: {props.name}</p>
             <img alt="Trip"></img>
-            <p>Location: </p>
-            <p>Dates: </p>
-            <p>Type: </p>
-            <p>Length: </p>
-            <p>Difficulty: </p>
-            <p>Rating: </p>
+            <p>Location: {props.location}</p>
+            <p>Start date: {props.startDate}</p>
+            <p>End date: {props.endDate}</p>
+            <p>Category: {props.category}</p>
+            <p>Length: {props.length} </p>
+            <p>Difficulty: {props.difficulty}</p>
+            <p>Rating: {props.rating}</p>
         </div>
     );
 }

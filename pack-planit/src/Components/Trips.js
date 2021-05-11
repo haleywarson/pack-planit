@@ -1,12 +1,35 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
 import "../App.css";
 
 import TripCard from "./TripCard"
 
+const tripsUrl = "http://localhost:9393/trips/";
+
 export default function Trips() {
 
-    // fetch data for cards here
+    const [trips, setTrips] = useState([]);
+
+    useEffect(() => {
+        fetch(tripsUrl)
+        .then((response) => response.json())
+        .then((data) => setTrips(data.trips) )
+    }, [])
+
+    const displayTrips = () => trips.map((trip) => (
+        <TripCard
+            key={trip.id}
+            name={trip.name}
+            location={trip.location}
+            startDate={trip.startDate}
+            endDate={trip.endDate}
+            category={trip.category}
+            length={trip.length}
+            difficulty={trip.difficulty}
+            rating={trip.rating}
+        />
+    ));
+
     return (
         <div className="trips">
             <h2 className="trips-title">Trips</h2>
@@ -14,7 +37,7 @@ export default function Trips() {
                 <h3 className="trips-upcoming-title">Upcoming</h3>
                 <h3 className="trips-past-title">Past</h3>
             </div>
-            <TripCard />
+            {displayTrips()}
         </div>
-        );
+    );
 }
