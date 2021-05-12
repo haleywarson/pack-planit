@@ -46,7 +46,7 @@ class Application
         return [200, {'Content-Type' => 'application/json'}, [list.to_json]]
     elsif req.path.match(/packit/) && req.delete?
         id = req.path.split('/')[2]
-        list = List.find(id)
+        list = PackingList.find(id)
         list.destroy 
         return [204, {}, ['']]
     else
