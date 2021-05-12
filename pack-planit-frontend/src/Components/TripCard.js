@@ -6,15 +6,19 @@ export default function TripCard(props) {
     return (
         <div className="trip-card">
             <img alt="Trip" src={props.image}></img>
-            <p>{props.name}</p>
-            <p>Location: {props.location}</p>
-            <p>Start date: {props.start_date}</p>
-            <p>End date: {props.end_date}</p>
+            <p id="trip-title">{props.name}</p>
+            <p>{props.location}</p>
+            <p>
+            {props.start_date} to {props.end_date}
+            </p>
+            <br/>
             <p>Category: {props.category}</p>
             <p>Miles: {props.miles} </p>
             <p>Difficulty: {props.difficulty}</p>
             <p>Rating: {props.rating}</p>
-            <p>Notes: {props.notes}</p>
+            <p>
+            <span>Notes:</span> {props.notes}
+            </p>
         </div>
     );
 }

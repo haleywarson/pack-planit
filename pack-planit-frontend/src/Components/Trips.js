@@ -33,9 +33,9 @@ export default function Trips() {
     ));
 
     return (
-        <div className="trips">
+        <div className="trips-container">
             <h2 className="trips-title">Trip log</h2>
-            {displayTrips()}
+            <div className="trips-list">{displayTrips()}</div>
         </div>
     );
 }
