@@ -39,7 +39,21 @@ export default function Plan() {
             body: JSON.stringify(values)
         }
         fetch(tripsUrl, options)
-    };
+        .then(res => res.json())
+        .then(() => {
+            setValues({
+                name: "",
+                location: "",
+                image: "",
+                start_date: "",
+                end_date: "",
+                category: "",
+                miles: 0,
+                difficulty: "",
+                rating: 0,
+                notes: ""
+            })})
+        };
 
     return (
         <div className="log-it-container">
