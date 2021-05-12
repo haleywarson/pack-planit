@@ -136,7 +136,7 @@ export default function Plan() {
             />
 
             <label htmlFor="rating">
-                Rating (worst --> best)
+                Rating (worst ... best)
             </label>
             <input
                 id="rating"
