@@ -1,10 +1,11 @@
 import React from 'react'
 
-export default function PackItCard() {
+export default function PackItCard(props) {
     return (
-        <li className="pack-it-card">
-            {/* <p>{props.items.title}</p>
-            <p>{props.items.content}</p> */}
-        </li>
+        <ul className="pack-it-list">
+            <li className="pack-it-item">
+                <p>{props.item} | {props.category}</p>
+            </li>
+        </ul>
     );
 }

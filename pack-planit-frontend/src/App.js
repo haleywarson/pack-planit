@@ -5,7 +5,7 @@ import "./App.css";
 
 import LogIt from "./Components/LogIt"
 import Main from "./Components/Main"
-import PackItContainer from "./Components/PackItContainer"
+import PackItForm from "./Components/PackItForm"
 
 function App() {
 
@@ -44,7 +44,7 @@ const toggleActive = (e) => {
         <main>
           <Switch>
             <Route path="/packit">
-              <PackItContainer />
+              <PackItForm />
             </Route>
             <Route path="/logit">
               <LogIt />
