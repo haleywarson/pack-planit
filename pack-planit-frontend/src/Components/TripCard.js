@@ -8,8 +8,8 @@ export default function TripCard(props) {
             <img alt="Trip" src={props.image}></img>
             <p>{props.name}</p>
             <p>Location: {props.location}</p>
-            <p>Start date: {props.startDate}</p>
-            <p>End date: {props.endDate}</p>
+            <p>Start date: {props.start_date}</p>
+            <p>End date: {props.end_date}</p>
             <p>Category: {props.category}</p>
             <p>Miles: {props.miles} </p>
             <p>Difficulty: {props.difficulty}</p>

@@ -170,7 +170,7 @@ header {
 }
 
 /* || Plan Page */
-.plan-container {
+.log-it-container {
     display: flex;
     align-items: center;
     justify-content: left;
@@ -183,7 +183,7 @@ header {
     height: 75vh;
 }
 
-.plan-form {
+.log-it-form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;

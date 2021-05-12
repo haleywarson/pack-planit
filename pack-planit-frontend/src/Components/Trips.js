@@ -22,8 +22,8 @@ export default function Trips() {
             name={trip.name}
             location={trip.location}
             image={trip.image}
-            startDate={trip.start_date}
-            endDate={trip.end_date}
+            start_date={trip.start_date}
+            end_date={trip.end_date}
             category={trip.category}
             miles={trip.miles}
             difficulty={trip.difficulty}
@@ -35,10 +35,6 @@ export default function Trips() {
     return (
         <div className="trips">
             <h2 className="trips-title">Trip log</h2>
-            {/* <div className="trips-filter">
-                <h3 className="trips-upcoming-title">Upcoming</h3>
-                <h3 className="trips-past-title">Past</h3>
-            </div> */}
             {displayTrips()}
         </div>
     );

@@ -31,9 +31,6 @@ export default function Plan() {
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log("submitting...")
-        // const name = event.target.name
-        // const value = event.target.value
-        // const newValues = setValues({ [name]: value });
         const options = {
             method: "POST",
             headers: {
@@ -45,8 +42,8 @@ export default function Plan() {
     };
 
     return (
-        <div className="plan-container">
-            <form className="plan-form" onSubmit={handleSubmit}>
+        <div className="log-it-container">
+            <form className="log-it-form" onSubmit={handleSubmit}>
             <h1>Log a trip</h1>
 
             <label htmlFor="name">Trip name</label>
@@ -82,24 +79,24 @@ export default function Plan() {
                 onChange={handleInputChange}
             />
 
-            <label htmlFor="startDate">Start date</label>
+            <label htmlFor="start_date">Start date</label>
             <input
-                id="startDate"
+                id="start_date"
                 className="form-field"
                 type="date"
                 placeholder="Start date"
-                name="startDate"
+                name="start_date"
                 value={values.start_date || ""}
                 onChange={handleInputChange}
             />
 
-            <label htmlFor="endDate">End date</label>
+            <label htmlFor="end_date">End date</label>
             <input
-                id="endDate"
+                id="end_date"
                 className="form-field"
                 type="date"
                 placeholder="End date"
-                name="endDate"
+                name="end_date"
                 value={values.end_date || ""}
                 onChange={handleInputChange}
             />

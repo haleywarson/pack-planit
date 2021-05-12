@@ -3,10 +3,9 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import "./App.css";
 
-import Plan from "./Components/Plan"
+import LogIt from "./Components/LogIt"
 import Main from "./Components/Main"
-import PackingListForm from "./Components/PackingListForm";
-import PackingListCard from "./Components/PackingListCard";
+import PackItContainer from "./Components/PackItContainer"
 
 function App() {
 
@@ -44,12 +43,11 @@ const toggleActive = (e) => {
 
         <main>
           <Switch>
-            <Route path="/pack">
-              <PackingListForm />
-              <PackingListCard />
+            <Route path="/packit">
+              <PackItContainer />
             </Route>
-            <Route path="/logtrip">
-              <Plan />
+            <Route path="/logit">
+              <LogIt />
             </Route>
             <Route path="/">
               <Main />

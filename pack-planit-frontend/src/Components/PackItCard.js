@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default function PackingListCard() {
+export default function PackItCard() {
     return (
-        <li className="packing-list-card">
+        <li className="pack-it-card">
             {/* <p>{props.items.title}</p>
             <p>{props.items.content}</p> */}
         </li>
