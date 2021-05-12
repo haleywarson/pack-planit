@@ -28,6 +28,27 @@ class Application
         trip = Trip.find(id)
         trip.destroy 
         return [204, {}, ['']]
+    elsif req.path == '/packit' && req.get?
+        return [200, {'Content-Type' => 'application/json'}, [{trips: PackingList.all}.to_json]]
+    elsif req.path.match(/packit/) && req.get?
+        id = req.path.split('/')[2]
+        list = PackingList.find(id)
+        return [200, {'Content-Type' => 'application/json'}, [list.to_json]]
+    elsif req.path == '/packit' && req.post?
+      data = JSON.parse(req.body.read)
+      new_list = PackingList.create(data)
+      return [201, {'Content-Type' => 'application/json'}, [list.to_json]]
+    elsif req.path.match(/packit/) && req.patch?
+        id = req.path.split('/')[2]
+        list = PackingList.find(id)
+        data = JSON.parse(req.body.read)
+        list.update(data)
+        return [200, {'Content-Type' => 'application/json'}, [list.to_json]]
+    elsif req.path.match(/packit/) && req.delete?
+        id = req.path.split('/')[2]
+        list = List.find(id)
+        list.destroy 
+        return [204, {}, ['']]
     else
       return [404, {}, ['']]
     end 
