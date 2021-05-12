@@ -13,7 +13,7 @@ function App() {
     <Router>
       <div>
         <header>
-          <Link to="/" >
+          <Link to="/">
             <h1 id="logo">Pack Planit</h1>
           </Link>
           <nav className="nav-menu-active">
@@ -26,6 +26,11 @@ function App() {
               <li className="nav-item">
                 <Link to="/logit" className="nav-link">
                   Log a trip
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="#trips" className="nav-link">
+                  See past trips
                 </Link>
               </li>
             </ul>

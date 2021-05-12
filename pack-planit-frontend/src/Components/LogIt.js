@@ -44,7 +44,6 @@ export default function Plan() {
     return (
         <div className="log-it-container">
             <form className="log-it-form" onSubmit={handleSubmit}>
-            <h1>Log a trip</h1>
 
             <label htmlFor="name">Trip name</label>
             <input
@@ -73,7 +72,7 @@ export default function Plan() {
                 id="image"
                 className="form-field"
                 type="text"
-                placeholder="image url"
+                placeholder="url"
                 name="image"
                 value={values.image || ""}
                 onChange={handleInputChange}
@@ -137,7 +136,7 @@ export default function Plan() {
             />
 
             <label htmlFor="rating">
-                Rating (1-5 stars, with 5 being the best)
+                Rating (worst --> best)
             </label>
             <input
                 id="rating"

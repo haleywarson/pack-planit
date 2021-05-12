@@ -27,24 +27,23 @@ export default function PackItForm() {
     return (
         <div className="pack-it-container">
             <form className="pack-it-form" onSubmit={handleSubmit}>
-                <h2>New PackIt List</h2>
-                <label htmlFor="item">Item</label>
-                    <input
-                    type="text"
-                    name="item"
-                    value={item}
-                    onChange={handleItemChange}
-                    />
-                <br />
-                <label htmlFor="content">Category</label>
-                    <input
-                    type="text"
-                    name="category"
-                    value={category}
-                    onChange={handleCategoryChange}
-                    />
-                <br />
-                <input type="submit" value="Add item" />
+            <label htmlFor="item">Item</label>
+            <input
+                type="text"
+                name="item"
+                value={item}
+                onChange={handleItemChange}
+            />
+            <br />
+            <label htmlFor="content">Category</label>
+            <input
+                type="text"
+                name="category"
+                value={category}
+                onChange={handleCategoryChange}
+            />
+            <br />
+                <input type="submit" value="Add item" id="button" />
             </form>
             <PackItCard item={item} category={category} />
         </div>
