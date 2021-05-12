@@ -5,6 +5,8 @@ import "./App.css";
 
 import Plan from "./Components/Plan"
 import Main from "./Components/Main"
+import PackingListForm from "./Components/PackingListForm";
+import PackingListCard from "./Components/PackingListCard";
 
 function App() {
 
@@ -42,7 +44,11 @@ const toggleActive = (e) => {
 
         <main>
           <Switch>
-            <Route path="/plan">
+            <Route path="/pack">
+              <PackingListForm />
+              <PackingListCard />
+            </Route>
+            <Route path="/logtrip">
               <Plan />
             </Route>
             <Route path="/">
@@ -51,7 +57,9 @@ const toggleActive = (e) => {
           </Switch>
         </main>
 
-        <footer><p>Copyright 2021 Pack Planit. All rights reserved.</p></footer>
+        <footer>
+          <p>Copyright 2021 Pack Planit. All rights reserved.</p>
+        </footer>
       </div>
     </Router>
   );

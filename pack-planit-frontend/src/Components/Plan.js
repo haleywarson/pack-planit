@@ -9,8 +9,8 @@ export default function Plan() {
         name: "",
         location: "",
         image: "",
-        startDate: "",
-        endDate: "",
+        start_date: "",
+        end_date: "",
         category: "",
         miles: 0,
         difficulty: "",
@@ -31,15 +31,15 @@ export default function Plan() {
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log("submitting...")
-        const name = event.target.name
-        const value = event.target.value
-        const newValues = setValues({ [name]: value });
+        // const name = event.target.name
+        // const value = event.target.value
+        // const newValues = setValues({ [name]: value });
         const options = {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(newValues)
+            body: JSON.stringify(values)
         }
         fetch(tripsUrl, options)
     };
@@ -89,7 +89,7 @@ export default function Plan() {
                 type="date"
                 placeholder="Start date"
                 name="startDate"
-                value={values.startDate || ""}
+                value={values.start_date || ""}
                 onChange={handleInputChange}
             />
 
@@ -100,7 +100,7 @@ export default function Plan() {
                 type="date"
                 placeholder="End date"
                 name="endDate"
-                value={values.endDate || ""}
+                value={values.end_date || ""}
                 onChange={handleInputChange}
             />
 
