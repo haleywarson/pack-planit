@@ -23,7 +23,7 @@ export default function PackItPage() {
     }
 
     const addItem = (newItem) => {
-        setItems(...items, newItem)
+        setItems(newItem)
     };
 
     const handleItemChange = (event) => {
