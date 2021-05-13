@@ -6,7 +6,8 @@ export default function PackItListContainer(props) {
 
     return (
         <div className="pack-it-list-container">
-            <h2>Packing List: {props.listName}</h2>
+            <h2>Packing List</h2>
+            <p>List Name: {props.listName}</p>
             <PackItList
                 listName={props.listName}
                 lists={props.lists}
