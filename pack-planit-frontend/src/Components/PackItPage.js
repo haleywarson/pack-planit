@@ -20,16 +20,14 @@ export default function PackItPage() {
     
     const addList = (newList) => {
         // let newListId = listId + 1;
-        setLists({lists: [...lists, newList]})
+        setLists([...lists, newList])
         // setListId({listId: [newListId]});
         fetch(listsUrl, {
             method: "POST",
             headers: {
             "Content-Type": "application/json",
             },
-            body: JSON.stringify({
-                newList
-            })
+            body: JSON.stringify(newList)
         })
     }
     
@@ -44,16 +42,12 @@ export default function PackItPage() {
     };
 
     const addItem = (newItem) => {
-    setItems({
-        items: [...items, newItem],
-    });
+        setItems([...items, newItem])
     };
 
     const handleItemChange = (event) => {
-        const newItem = event.target.value;
-        setItems({
-            items: [...items, newItem],
-        });
+        let newItem = event.target.value
+        setItems([...items, newItem])
     };
 
     const handleSubmit = (event) => {
@@ -65,7 +59,7 @@ export default function PackItPage() {
         let filteredItems = items.filter((item) => {
             return item !== itemToRemove;
         });
-        setItems({items: filteredItems});
+        setItems(filteredItems);
     };
 
     return (

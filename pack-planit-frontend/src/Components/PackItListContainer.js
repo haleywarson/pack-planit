@@ -18,6 +18,7 @@ export default function PackItListContainer(props) {
 
     return (
         <div className="pack-it-list-container">
+            <h2>Packing List</h2>
             {showList()}
         </div>
     );

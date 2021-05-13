@@ -12,7 +12,7 @@ export default function PackItForm(props) {
                 onChange={props.handleItemChange}
             />
             <br/>
-            <input type="submit" value="Add item" id="button" onClick={props.addItem}/>
+            <input type="submit" value="Add item" id="button" onClick={(event) => props.addItem(event.target)}/>
         </form>
     );
 }
