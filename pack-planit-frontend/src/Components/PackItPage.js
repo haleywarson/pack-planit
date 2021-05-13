@@ -12,9 +12,8 @@ export default function PackItPage() {
 
     useEffect(() => {
         fetch(listsUrl)
-        .then((response) => response.json())
-        .then((alllists) => setLists(alllists.lists.map(list => list.list)
-        ))
+            .then((response) => response.json())
+            .then((alllists) => setLists(alllists.lists));
     })
 
     const addList = (newList) => {
