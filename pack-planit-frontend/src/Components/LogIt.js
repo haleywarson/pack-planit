@@ -58,7 +58,6 @@ export default function Plan() {
     return (
         <div className="log-it-container">
             <form className="log-it-form" onSubmit={handleSubmit}>
-
             <label htmlFor="name">Trip name</label>
             <input
                 id="name"
@@ -149,9 +148,7 @@ export default function Plan() {
                 onChange={handleInputChange}
             />
 
-            <label htmlFor="rating">
-                Rating (worst ... best)
-            </label>
+            <label htmlFor="rating">Rating (worst ... best)</label>
             <input
                 id="rating"
                 className="form-field"

@@ -1,21 +1,19 @@
 import React, { useState } from "react";
 
-import PackItCard from "./PackItCard"
+export default function PackItForm(props) {
 
-export default function PackItForm() {
+    const [items, setItems] = useState([]);
 
-    const [item, setItem] = useState("")
-    const [category, setCategory] = useState("");
-
-    const handleItemChange = (event) => {
-        setItem({
-            item: event.target.value,
-        })
+    const addItem = (newItem) => {
+        setItems({
+            items: [...items, newItem],
+        });
     };
-
-    const handleCategoryChange = (event) => {
-        setCategory({
-            category: event.target.value,
+    
+    const handleChange = (event) => {
+        const newItem = event.target.value
+        setItems({
+            items: [...items, newItem]
         })
     };
 
@@ -25,27 +23,16 @@ export default function PackItForm() {
     };
 
     return (
-        <div className="pack-it-container">
-            <form className="pack-it-form" onSubmit={handleSubmit}>
-                <label htmlFor="item">Item</label>
-                    <input
-                        type="text"
-                        name="item"
-                        value={item}
-                        onChange={handleItemChange}
-                    />
-                <br />
-                <label htmlFor="content">Category</label>
-                    <input
-                        type="text"
-                        name="category"
-                        value={category}
-                        onChange={handleCategoryChange}
-                    />
-                <br />
-                    <input type="submit" value="Add item" id="button" />
-            </form>
-            <PackItCard key="card" item={item} category={category} />
-        </div>
+        <form className="pack-it-form" onSubmit={handleSubmit}>
+            <label htmlFor="item">Item</label>
+            <input
+                type="text"
+                name="item"
+                value={items}
+                onChange={handleChange}
+            />
+            <br/>
+            <input type="submit" value="Add item" id="button" onClick={addItem}/>
+        </form>
     );
 }

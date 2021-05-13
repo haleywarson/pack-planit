@@ -5,7 +5,7 @@ import "./App.css";
 
 import LogIt from "./Components/LogIt"
 import Main from "./Components/Main"
-import PackItForm from "./Components/PackItForm"
+import PackItPage from "./Components/PackItPage"
 
 function App() {
 
@@ -40,7 +40,7 @@ function App() {
         <main>
           <Switch>
             <Route path="/packit">
-              <PackItForm />
+              <PackItPage />
             </Route>
             <Route path="/logit">
               <LogIt />
