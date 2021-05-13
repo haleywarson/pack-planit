@@ -21,12 +21,13 @@ export default function PackItList(props) {
                 removeItem={props.removeItem}
             />
             </ul>
-            {/* <button 
+
+            <button 
                 className="create-list" 
                 onClick={(event) => props.addList(event.target)}
             >
-            Add list
-            </button> */}
+            Complete list
+            </button>
         </div>
     );
 }
