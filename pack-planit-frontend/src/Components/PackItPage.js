@@ -1,53 +1,41 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 
 import PackItForm from "./PackItForm"
 import PackItListContainer from "./PackItListContainer"
 
-const listsUrl = "http://localhost:9393/packit";
+// const listsUrl = "http://localhost:9393/packit";
 
 export default function PackItPage() {
     
     const [lists, setLists] = useState([])
-    // const [listId, setListId] = useState(0);
+    const [listName, setListName] = useState([])
     const [items, setItems] = useState([]);
     
-    useEffect(() => {
-        fetch(listsUrl)
-        .then((response) => response.json())
-        .then((alllists) => setLists(alllists.lists)
-        )
-    }, [])
-    
     const addList = (newList) => {
-        // let newListId = listId + 1;
-        setLists([...lists, newList])
-        // setListId({listId: [newListId]});
-        fetch(listsUrl, {
-            method: "POST",
-            headers: {
-            "Content-Type": "application/json",
-            },
-            body: JSON.stringify(newList)
-        })
+        setLists(newList)
+        // fetch(listsUrl, {
+        //     method: "POST",
+        //     headers: {
+        //     "Content-Type": "application/json",
+        //     },
+        //     body: JSON.stringify(newList)
+        // })
     }
-    
-    const removeList = (listToRemove) => {
-        let filteredLists = lists.filter((list) => {
-            return list !== listToRemove;
-        });
-        setLists({lists: filteredLists});
-        fetch(listsUrl + listToRemove.id, {
-            method: "DELETE",
-        });
-    };
 
     const addItem = (newItem) => {
-        setItems([...items, newItem])
+        setItems(...items, newItem)
     };
 
     const handleItemChange = (event) => {
-        let newItem = event.target.value
-        setItems([...items, newItem])
+        event.persist();
+        const newItem = event.target.value
+        setItems(newItem)
+    };
+
+    const handleListNameChange = (event) => {
+        event.persist();
+        const newListName = event.target.value
+        setListName(newListName)
     };
 
     const handleSubmit = (event) => {
@@ -67,12 +55,15 @@ export default function PackItPage() {
             <PackItForm 
                 items = {items}
                 handleItemChange = {handleItemChange}
+                handleListNameChange = {handleListNameChange}
                 handleSubmit = {handleSubmit}
                 addItem = {addItem}
+                listName = {listName}
             />
             <PackItListContainer 
+                listName = {listName}
                 lists={lists} 
-                removeList={removeList}
+                // removeList={removeList}
                 addList={addList}
                 removeItem ={removeItem}
                 items={items}
@@ -80,3 +71,26 @@ export default function PackItPage() {
         </div>
     )
 }
+
+    // const [itemId, setItemId] = useState(0)
+    // const [listId, setListId] = useState(0);
+    
+    // useEffect(() => {
+    //     fetch(listsUrl)
+    //     .then((response) => response.json())
+    //     .then((alllists) => setLists(alllists.lists)
+    //     )
+    // }, [])
+    
+    // const removeList = (listToRemove) => {
+    //     let filteredLists = lists.filter((list) => {
+    //         return list !== listToRemove;
+    //     });
+    //     setLists(filteredLists);
+    //     fetch(listsUrl + listToRemove.id, {
+    //         method: "DELETE",
+    //     });
+    // };
+
+        // let newListId = listId + 1;
+        // setListId(newListId);
