@@ -6,6 +6,7 @@ export default function PackItForm(props) {
         <form className="pack-it-form" onSubmit={props.handleSubmit}>
             <label htmlFor="listName">Packing list name</label>
             <input
+                className="form-field"
                 type="text"
                 name="listName"
                 value={props.listName}
@@ -13,6 +14,7 @@ export default function PackItForm(props) {
             />
             <label htmlFor="item">Item</label>
             <input
+                className="form-field"
                 type="text"
                 name="item"
                 value={props.items}

@@ -11,10 +11,13 @@ header {
 #logo {
   color: white;
   font-size: 2rem;
-  text-decoration: none;
   padding-left: 1em;
   padding-right: .5em;
   font-family: 'Unica One', cursive;
+}
+
+header a {
+  text-decoration: none;
 }
 
 #logo:hover {
@@ -269,6 +272,10 @@ header {
   font-size: 1.2rem;
   padding: 1em;
   color: #5A58A6;
+}
+
+.form-field {
+  margin: 1em;
 }
 
 .pack-it-list {
