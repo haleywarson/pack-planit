@@ -18,18 +18,18 @@ export default function PackItList(props) {
         <div className="pack-it-list">
             <ul>{showItems()}</ul>
             <div>
-            <button
-                className="create-list"
-                onClick={() => props.addList()}
-            >
-                Complete list
-            </button>
-            <button
-                id="list-delete-button"
-                onClick={(event) => props.removeList()}
-            >
-                Clear all
-            </button>
+                <button
+                    className="create-list"
+                    onClick={() => props.addList()}
+                >
+                    Complete list
+                </button>
+                <button
+                    id="list-delete-button"
+                    onClick={() => props.removeList()}
+                >
+                    Clear all
+                </button>
             </div>
         </div>
     );

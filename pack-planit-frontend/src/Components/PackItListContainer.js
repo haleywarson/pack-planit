@@ -18,16 +18,3 @@ export default function PackItListContainer(props) {
         </div>
     );
 }
-                // removeList={props.removeList}
-
-    // const displayList = () => {
-    //     return props.lists.map((list) => (
-    //         <PackItList
-    //             listName={props.listName}
-    //             key={list.id}
-    //             lists={props.lists}
-    //             addList={props.addList}
-    //             items={props.items}
-    //         />
-    //     ));
-    // }
