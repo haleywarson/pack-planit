@@ -10,9 +10,9 @@ header {
 
 #logo {
   color: white;
-  font-size: 2rem;
-  padding-left: 1em;
-  padding-right: .2em;
+  font-size: 2.1rem;
+  padding-left: .5em;
+  padding-right: .5em;
   font-family: 'Unica One', cursive;
 }
 
@@ -27,8 +27,8 @@ header a {
 .nav-item {
   list-style: none;
   display: inline-block;
-  padding: .7em;
-  font-size: 1.8rem;
+  padding: .5em;
+  font-size: 1.7rem;
 }
 
 .nav-link {
@@ -62,10 +62,10 @@ header a {
     flex-direction: column;
     padding: 1.5em;
     max-height: 50%;
-    max-width: 40%;
+    max-width: 45%;
     background: #9FBFAA;
     opacity: .8;
-    margin-left: 1.7em;
+    margin-left: 1em;
     border-radius: 40px;
 }
 
@@ -78,7 +78,7 @@ header a {
 
 .main-content h3 {
   font-size: 1.7rem;
-  font-family: 'Crimson Text', serif;
+  font-family: 'Open Sans', sans-serif;
   padding-bottom: .5em;
   color: white;
 }
@@ -114,7 +114,7 @@ header a {
 .trips-title {
   font-size: 3rem;
   font-family: 'Unica One', cursive;
-  padding: .7em;
+  padding: .5em;
   color: #9FBFAA;
 }
 
@@ -133,15 +133,15 @@ header a {
   display: flex;
   flex-direction: column;
   background-color: white;
-  max-width: 13em;
+  max-width: 10em;
   flex-grow: 1;
-  flex-basis: 13em;
+  flex-basis: 10em;
   padding: 1em;
-  margin: .5em;
+  margin: .3em;
   border-radius: 7%;
   box-shadow: 2px 2px 3px rgba(206, 205, 205, 0.582);
-  font-family: 'Crimson Text', serif;
-  margin-bottom: 1em;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 2em;
   color: #5A58A6;
 }
 
@@ -168,8 +168,8 @@ header a {
   align-items: center;
   background-color: white;
   width: 100%;
-  font-family: 'Crimson Text', serif;
-  font-size: 1.2rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
   padding: 1em;
   color: #5A58A6;
 }
@@ -256,10 +256,12 @@ header a {
   align-items: center;
   background-color: white;
   width: 100%;
-  font-family: 'Crimson Text', serif;
-  font-size: 1.2rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  min-height: 25vh;
   color: #5A58A6;
-  padding: 1em;
+  padding-top: 1em;
+  margin-bottom: 1rem;
 }
 
 .pack-it-list-container {
@@ -269,21 +271,21 @@ header a {
   align-items: center;
   background-color: white;
   width: 100%;
-  min-height: 20vh;
-  font-family: 'Crimson Text', serif;
-  font-size: 1.2rem;
-  padding: 1em;
+  min-height: 45vh;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
   color: #5A58A6;
 }
 
 .pack-it-list {
   display: flex; 
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: #B4C8D9;
   padding: 1em;
   width: 75%;
+  min-height: 35vh;
   border-radius: 13px;
 }
 
@@ -338,7 +340,7 @@ footer {
 footer p {
   color: white;
   font-size: 1rem;
-  font-family: 'Crimson Text', serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* || Colors */

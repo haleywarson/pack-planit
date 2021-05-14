@@ -16,7 +16,6 @@ export default function PackItList(props) {
     return (
         <div className="pack-it-list">
             <ul>{showItems()}</ul>
-       
             <button 
                 className="create-list" 
                 onClick={(event) => props.addList(event.target)}
