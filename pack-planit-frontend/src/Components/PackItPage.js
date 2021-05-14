@@ -35,14 +35,17 @@ export default function PackItPage() {
         setItems(filteredItems);
     };
     
-    const addList = (newList) => {
-        setLists(newList)
+    const addList = () => {
+        setLists(items)
         fetch(listsUrl, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(newList)
+            body: JSON.stringify({
+                "name": listName, 
+                "list": items
+            })
         })
     }
 

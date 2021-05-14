@@ -20,7 +20,7 @@ export default function PackItList(props) {
             <div>
             <button
                 className="create-list"
-                onClick={(event) => props.addList(event.target)}
+                onClick={() => props.addList()}
             >
                 Complete list
             </button>
