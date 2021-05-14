@@ -26,11 +26,9 @@ export default function PackItPage() {
         setItems(newItem)
     };
 
-    const handleItemChange = (event) => {
-        event.persist();
-        const newItem = event.target.value
-        setItems(newItem)
-    };
+    // const handleItemChange = (event) => {
+    //     event.persist();
+    // };
 
     const handleListNameChange = (event) => {
         event.persist();
@@ -41,6 +39,9 @@ export default function PackItPage() {
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log("adding list item...");
+        const newItem = event.target.item.value
+        setItems([...items, newItem])
+        event.target.item.value = ""
     };
 
     const removeItem = (itemToRemove) => {
@@ -54,7 +55,7 @@ export default function PackItPage() {
         <div className="pack-it-page">
             <PackItForm 
                 items = {items}
-                handleItemChange = {handleItemChange}
+                // handleItemChange = {handleItemChange}
                 handleListNameChange = {handleListNameChange}
                 handleSubmit = {handleSubmit}
                 addItem = {addItem}
@@ -63,10 +64,10 @@ export default function PackItPage() {
             <PackItListContainer 
                 listName = {listName}
                 lists={lists} 
-                // removeList={removeList}
                 addList={addList}
                 removeItem ={removeItem}
                 items={items}
+                // removeList={removeList}
             />
         </div>
     )

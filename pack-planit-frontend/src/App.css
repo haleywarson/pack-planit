@@ -1,7 +1,7 @@
 /* || Header & Nav */
 header {
   background-color: #B4C8D9;
-  height:10vh;
+  height: 10vh;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -12,7 +12,7 @@ header {
   color: white;
   font-size: 2rem;
   padding-left: 1em;
-  padding-right: .5em;
+  padding-right: .2em;
   font-family: 'Unica One', cursive;
 }
 

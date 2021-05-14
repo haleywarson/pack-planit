@@ -20,19 +20,19 @@ function App() {
             <ul className="nav-list">
               <li className="nav-item">
                 <Link to="/packit" className="nav-link">
-                  Plan your trip
+                  PlanIt
                 </Link>
               </li>
               <li className="nav-item">
                 <Link to="/logit" className="nav-link">
-                  Log a trip
+                  LogIt
                 </Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link to="/#trips" className="nav-link">
                   Trips
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </nav>
         </header>
