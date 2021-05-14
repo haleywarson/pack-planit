@@ -26,9 +26,9 @@ export default function PackItList(props) {
             </button>
             <button
                 id="list-delete-button"
-                onClick={(event) => props.removeList(event.target)}
+                onClick={(event) => props.removeList()}
             >
-                X
+                Clear all
             </button>
             </div>
         </div>

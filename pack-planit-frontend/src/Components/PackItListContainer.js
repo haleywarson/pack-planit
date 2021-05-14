@@ -13,6 +13,7 @@ export default function PackItListContainer(props) {
                 addList={props.addList}
                 items={props.items}
                 removeItem={props.removeItem}
+                removeList={props.removeList}
             />
         </div>
     );

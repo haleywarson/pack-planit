@@ -49,16 +49,10 @@ export default function PackItPage() {
         })
     }
 
-    const removeList = (listToRemove) => {
-        let filteredLists = lists.filter((list) => {
-            return list !== listToRemove;
-        });
-        setLists(filteredLists);
-        fetch(listsUrl + listToRemove.id, {
-            method: "DELETE",
-        });
+    const removeList = () => {
+        setItems([]);
     };
-
+    
     return (
         <div className="pack-it-page">
             <PackItForm 
@@ -74,23 +68,26 @@ export default function PackItPage() {
                 addList={addList}
                 removeItem ={removeItem}
                 items={items}
-                // removeList={removeList}
+                removeList={removeList}
                 />
         </div>
     )
 }
 
-    // const [itemId, setItemId] = useState(0)
-    // const [listId, setListId] = useState(0);
+
+// const [itemId, setItemId] = useState(0)
+// const [listId, setListId] = useState(0);
+
+// useEffect(() => {
+    //     fetch(listsUrl)
+    //     .then((response) => response.json())
+    //     .then((alllists) => setLists(alllists.lists)
+    //     )
+    // }, [])
+        
+    // handleItemChange = {handleItemChange}
     
-    // useEffect(() => {
-        //     fetch(listsUrl)
-        //     .then((response) => response.json())
-        //     .then((alllists) => setLists(alllists.lists)
-        //     )
-        // }, [])
-        
-        // handleItemChange = {handleItemChange}
-        
-        // let newListId = listId + 1;
+    // let newListId = listId + 1;
+    // fetch(listsUrl + listToRemove.id, {
+    //     method: "DELETE",
         // setListId(newListId);
