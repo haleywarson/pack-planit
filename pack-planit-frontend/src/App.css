@@ -65,7 +65,7 @@ header a {
     max-width: 40%;
     background: #9FBFAA;
     opacity: .8;
-    margin-left: .5em;
+    margin-left: 1.7em;
     border-radius: 40px;
 }
 
@@ -268,7 +268,7 @@ header a {
   justify-content: space-around;
   align-items: center;
   background-color: white;
-  width: 75%;
+  width: 100%;
   min-height: 20vh;
   font-family: 'Crimson Text', serif;
   font-size: 1.2rem;
@@ -276,15 +276,15 @@ header a {
   color: #5A58A6;
 }
 
-.form-field {
-  margin: 1em;
-}
-
 .pack-it-list {
-    background-color: #B4C8D9;
-    padding: 1em;
-    width: 75%;
-    border-radius: 13px;
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #B4C8D9;
+  padding: 1em;
+  width: 75%;
+  border-radius: 13px;
 }
 
 .pack-it-list button {
