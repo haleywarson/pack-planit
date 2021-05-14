@@ -43,13 +43,13 @@ function App() {
           <nav className="nav-menu-active">
             <ul className="nav-list">
               <li className="nav-item">
-                <Link to="/packit" className="nav-link">
-                  Pack
+                <Link to="/logit" className="nav-link">
+                  Log Trip
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/logit" className="nav-link">
-                  Log Trip
+                <Link to="/packit" className="nav-link">
+                  Pack
                 </Link>
               </li>
             </ul>
@@ -58,11 +58,11 @@ function App() {
 
         <main>
           <Switch>
-            <Route path="/packit">
-              <PackItPage />
-            </Route>
             <Route path="/logit">
               <LogIt />
+            </Route>
+            <Route path="/packit">
+              <PackItPage />
             </Route>
             <Route
               path="/login" exact
