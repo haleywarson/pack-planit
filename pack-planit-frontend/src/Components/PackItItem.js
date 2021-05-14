@@ -3,7 +3,7 @@ import React from 'react'
 export default function PackItItem(props) {
 
     return (
-      <li className="pack-it-item">
+        <li className="pack-it-item">
             <p>
             <button
                 id="check-button"

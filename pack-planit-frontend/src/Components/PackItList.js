@@ -17,14 +17,20 @@ export default function PackItList(props) {
     return (
         <div className="pack-it-list">
             <ul>{showItems()}</ul>
-            <button 
-                className="create-list" 
+            <div>
+            <button
+                className="create-list"
                 onClick={(event) => props.addList(event.target)}
-            >Complete list</button>
+            >
+                Complete list
+            </button>
+            <button
+                id="list-delete-button"
+                onClick={(event) => props.removeList(event.target)}
+            >
+                X
+            </button>
+            </div>
         </div>
     );
 }
-
-            /* <button className="delete-list" onClick={(event) => props.removeList(event.target)}>
-            Delete
-            </button> */

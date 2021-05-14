@@ -28,11 +28,6 @@ function App() {
                   Trip Log
                 </Link>
               </li>
-              {/* <li className="nav-item">
-                <Link to="/#trips" className="nav-link">
-                  Trips
-                </Link>
-              </li> */}
             </ul>
           </nav>
         </header>
