@@ -7,6 +7,7 @@ export default function TripCard(props) {
         <div className="trip-card">
             <img alt="Trip" src={props.image}></img>
             <p id="trip-title">{props.name}</p>
+            <br/>
             <p>{props.location}</p>
             <p>
             {props.start_date} to {props.end_date}

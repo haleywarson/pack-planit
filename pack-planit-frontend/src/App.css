@@ -1,7 +1,7 @@
 /* || Header & Nav */
 header {
   background-color: #B4C8D9;
-  height:10vh;
+  height: 10vh;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -10,12 +10,14 @@ header {
 
 #logo {
   color: white;
-  text-decoration: none;
-  font-size: 2rem;
-  text-decoration: none;
-  padding-left: 1em;
+  font-size: 2.1rem;
+  padding-left: .5em;
   padding-right: .5em;
   font-family: 'Unica One', cursive;
+}
+
+header a {
+  text-decoration: none;
 }
 
 #logo:hover {
@@ -25,8 +27,8 @@ header {
 .nav-item {
   list-style: none;
   display: inline-block;
-  padding: .7em;
-  font-size: 1.8rem;
+  padding: .5em;
+  font-size: 1.5rem;
 }
 
 .nav-link {
@@ -53,35 +55,52 @@ header {
     background-attachment: fixed;
     width: 100%;
     height: 85vh;
-    opacity: .9;
 }
 
 .main-content {
     display: flex-start;
     flex-direction: column;
-    padding: 2em;
+    padding: 1.5em;
     max-height: 50%;
-    max-width: 35%;
+    max-width: 45%;
+    background: #9FBFAA;
+    opacity: .8;
+    margin-left: 1em;
+    border-radius: 40px;
 }
 
 .main-content h2 {
-  font-size: 5rem;
+  font-size: 2.7rem;
   font-family: 'Unica One', cursive;
-  padding-bottom: .5em;
+  padding-bottom: .2em;
   color: white;
-
 }
 
 .main-content h3 {
-  font-size: 2rem;
-  font-family: 'Crimson Text', serif;
+  font-size: 1.7rem;
+  font-family: 'Open Sans', sans-serif;
   padding-bottom: .5em;
   color: white;
 }
 
 .main-content button {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-family: 'Unica One', cursive;
+  border-top: 1px solid #96d1f8;
+  background: #656FA6;
+  padding: 10px 12px;
+  border-radius: 13px;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.main-content button a {
+  text-decoration: none;
+  color: white;
+}
+
+.main-content button:hover {
+  opacity: .7;
 }
 
 /* || Trips Section */
@@ -95,7 +114,7 @@ header {
 .trips-title {
   font-size: 3rem;
   font-family: 'Unica One', cursive;
-  padding: .7em;
+  padding: .5em;
   color: #9FBFAA;
 }
 
@@ -114,15 +133,15 @@ header {
   display: flex;
   flex-direction: column;
   background-color: white;
-  max-width: 13em;
+  max-width: 9em;
   flex-grow: 1;
-  flex-basis: 13em;
-  padding: 1em;
-  margin: .5em;
+  flex-basis: 9em;
+  padding: .9em;
+  margin: .1em;
   border-radius: 7%;
   box-shadow: 2px 2px 3px rgba(206, 205, 205, 0.582);
-  font-family: 'Crimson Text', serif;
-  margin-bottom: 1em;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 2em;
   color: #5A58A6;
 }
 
@@ -149,8 +168,8 @@ header {
   align-items: center;
   background-color: white;
   width: 100%;
-  font-family: 'Crimson Text', serif;
-  font-size: 1.2rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
   padding: 1em;
   color: #5A58A6;
 }
@@ -163,17 +182,71 @@ header {
   padding: 2em;
 }
 
+.log-it-container input[type=submit] {
+  font-size: 1.3rem;
+  font-family: 'Unica One', cursive;
+  border-top: 1px solid #96d1f8;
+  background: #656FA6;
+  padding: 10px 12px;
+  border-radius: 13px;
+  text-decoration: none;
+  vertical-align: middle;
+  text-decoration: none;
+  color: white;
+}
+
+.log-it-container input[type=date], input[type=text], input[type=number] {
+  font-size: 1rem;
+  font-family: 'Open Sans', sans-serif;
+  background: #B4C8D9;
+  padding: 10px 12px;
+  border-radius: 13px;
+  text-decoration: none;
+  vertical-align: middle;
+  text-decoration: none;
+  color: white;
+  border: none;
+  width: 75%
+}
+
+.log-it-container input[type=range] {
+  width: 60%;
+  background-color: #B4C8D9;
+}
+
+.log-it-container input[type=range]{
+    -webkit-appearance: none;
+}
+
+.log-it-container input[type=range]::-webkit-slider-runnable-track {
+    height: .5em;
+    background: #B4C8D9;
+    border: none;
+}
+
+.log-it-container input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #5A58A6;
+    margin-top: -4px;
+}
+
+.log-it-container input[type=submit]:hover {
+  opacity: .7;
+}
 
 /* || PackIt Page */
 
 .pack-it-page {
-    display: flex;
-    align-items: flex-start;
     justify-content: center;
     background-color: white;
     width: 100%;
     height: 85vh;
     overflow: scroll;
+    align-items: center;
 }
 
 .pack-it-form {
@@ -183,37 +256,123 @@ header {
   align-items: center;
   background-color: white;
   width: 100%;
-  font-family: 'Crimson Text', serif;
-  font-size: 1.2rem;
-  padding: 1em;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  min-height: 20vh;
   color: #5A58A6;
-}
-
-.pack-it-card-container {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    background-color: white;
-    width: 100%;
-    height: 85vh;
-    overflow: scroll;
-}
-
-.pack-it-item-container {
-    background-color: grey;
+  padding-top: 1em;
+  margin-bottom: 1rem;
 }
 
 .pack-it-list-container {
-    background-color: grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  min-height: 45vh;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  color: #5A58A6;
 }
 
+.pack-it-list {
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #B4C8D9;
+  padding: 1em;
+  width: 75%;
+  min-height: 30vh;
+  border-radius: 13px;
+}
 
-/* .pack-it-form #button {
-  font-family: 'Crimson Text', serif;
-  font-size: 1rem;
-  padding: .5em;
-  color: #5A58A6;
-} */
+.pack-it-list input[type=text] {
+  font-family: 'Open Sans', sans-serif ;
+}
+
+.pack-it-list button {
+  font-size: 1.3rem;
+  font-family: 'Unica One', cursive;
+  border-top: 1px solid #96d1f8;
+  background: #656FA6;
+  padding: 10px 12px;
+  border-radius: 13px;
+  text-decoration: none;
+  vertical-align: middle;
+  text-decoration: none;
+  color: white;
+}
+
+.pack-it-list button:hover {
+  opacity: .7;
+}
+
+.pack-it-container button, input[type=submit] {
+  font-size: 1.3rem;
+  font-family: 'Unica One', cursive;
+  border-top: 1px solid #96d1f8;
+  background: #656FA6;
+  padding: 10px 12px;
+  border-radius: 13px;
+  text-decoration: none;
+  vertical-align: middle;
+  text-decoration: none;
+  color: white;
+} 
+
+.pack-it-container button, input[type=submit]:hover {
+  opacity: .7;
+}
+
+.pack-it-item {
+  padding: .3em;
+}
+
+#check-button {
+  font-size: .8rem;
+  display: inline-block;
+  font-family: 'Unica One', cursive;
+  background: #9FBFAA;
+  border: none;
+  padding: 3px 7px;
+  border-radius: 7px;
+  text-decoration: none;
+  vertical-align: middle;
+  color: white;
+  margin-right: .5em;
+}
+
+#delete-button {
+  font-size: .8rem;
+  display: inline-block;
+  font-family: 'Unica One', cursive;
+  background: rgba(247, 120, 120, 0.481);
+  border: none;
+  padding: 3px 9px;
+  border-radius: 7px;
+  text-decoration: none;
+  vertical-align: middle;
+  color: white;
+  margin-right: 1em;
+}
+
+#list-delete-button {
+  font-size: 1.3rem;
+  display: inline-block;
+  font-family: 'Unica One', cursive;
+  border-top: 1px solid #96d1f8;
+  background: rgba(247, 120, 120, 0.481);
+  padding: 10px 12px;
+  border-radius: 13px;
+  text-decoration: none;
+  vertical-align: middle;
+  text-decoration: none;
+  color: white;
+  margin-left: .5em;
+}
 
 /* || Footer */
 footer {
@@ -232,7 +391,7 @@ footer {
 footer p {
   color: white;
   font-size: 1rem;
-  font-family: 'Crimson Text', serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* || Colors */

@@ -85,7 +85,7 @@ export default function Plan() {
                 id="image"
                 className="form-field"
                 type="text"
-                placeholder="url"
+                placeholder=""
                 name="image"
                 value={values.image || ""}
                 onChange={handleInputChange}

@@ -20,17 +20,12 @@ function App() {
             <ul className="nav-list">
               <li className="nav-item">
                 <Link to="/packit" className="nav-link">
-                  Plan your trip
+                  Pack
                 </Link>
               </li>
               <li className="nav-item">
                 <Link to="/logit" className="nav-link">
-                  Log a trip
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/#trips" className="nav-link">
-                  Trips
+                  Trip Log
                 </Link>
               </li>
             </ul>

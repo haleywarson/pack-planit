@@ -29,7 +29,7 @@ class Application
         trip.destroy 
         return [204, {}, ['']]
     elsif req.path == '/packit' && req.get?
-        return [200, {'Content-Type' => 'application/json'}, [{trips: PackingList.all}.to_json]]
+        return [200, {'Content-Type' => 'application/json'}, [{lists: PackingList.all}.to_json]]
     elsif req.path.match(/packit/) && req.get?
         id = req.path.split('/')[2]
         list = PackingList.find(id)
