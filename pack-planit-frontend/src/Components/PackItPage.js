@@ -34,7 +34,6 @@ export default function PackItPage() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log("adding list item...");
         const newItem = event.target.item.value
         setItems([...items, newItem])
         event.target.item.value = ""

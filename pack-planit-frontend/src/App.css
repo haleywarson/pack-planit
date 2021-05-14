@@ -235,7 +235,7 @@ header a {
 }
 
 .log-it-container input[type=submit]:hover {
-   opacity: .7;
+  opacity: .7;
 }
 
 /* || PackIt Page */
@@ -320,7 +320,39 @@ header a {
 } 
 
 .pack-it-container button, input[type=submit]:hover {
-   opacity: .7;
+  opacity: .7;
+}
+
+.pack-it-item {
+  padding: .3em;
+}
+
+#check-button {
+  font-size: .8rem;
+  display: inline-block;
+  font-family: 'Unica One', cursive;
+  background: #9FBFAA;
+  border: none;
+  padding: 3px 7px;
+  border-radius: 7px;
+  text-decoration: none;
+  vertical-align: middle;
+  color: white;
+  margin-right: .5em;
+}
+
+#delete-button {
+  font-size: .8rem;
+  display: inline-block;
+  font-family: 'Unica One', cursive;
+  background: rgba(247, 120, 120, 0.481);
+  border: none;
+  padding: 3px 9px;
+  border-radius: 7px;
+  text-decoration: none;
+  vertical-align: middle;
+  color: white;
+  margin-right: 1em;
 }
 
 /* || Footer */
