@@ -48,6 +48,8 @@ export default function PackItPage() {
             list: items,
         }),
         });
+        setItems([]);
+        setListName([]);
     };
 
     const removeList = () => {

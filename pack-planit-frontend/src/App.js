@@ -49,7 +49,7 @@ function App() {
               </li>
               <li className="nav-item">
                 <Link to="/logit" className="nav-link">
-                  Trip Log
+                  Log Trip
                 </Link>
               </li>
             </ul>
@@ -65,11 +65,11 @@ function App() {
               <LogIt />
             </Route>
             <Route
-              path="/" exact
+              path="/login" exact
               render={(props) => 
               <Login {...props} login={login} />}
             />
-            <Route path="/home">
+            <Route path="/">
               <Main />
             </Route>
           </Switch>

@@ -1,6 +1,6 @@
 /* || Login */
 .login {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-family: 'Open Sans', sans-serif;
   padding: 3em;
   color: #5A58A6;
@@ -405,7 +405,7 @@ footer {
 
 footer p {
   color: white;
-  font-size: 1rem;
+  font-size: .9rem;
   font-family: 'Open Sans', sans-serif;
 }
 
