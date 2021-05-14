@@ -258,7 +258,7 @@ header a {
   width: 100%;
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
-  min-height: 25vh;
+  min-height: 20vh;
   color: #5A58A6;
   padding-top: 1em;
   margin-bottom: 1rem;
@@ -285,7 +285,7 @@ header a {
   background-color: #B4C8D9;
   padding: 1em;
   width: 75%;
-  min-height: 35vh;
+  min-height: 30vh;
   border-radius: 13px;
 }
 

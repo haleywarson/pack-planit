@@ -17,7 +17,6 @@ export default function PackItForm(props) {
                 className="form-field"
                 type="text"
                 name="item"
-                // onChange={props.handleItemChange}
             />
             <input type="submit" value="Add item"/>
         </form>

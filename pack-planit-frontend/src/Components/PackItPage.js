@@ -26,10 +26,6 @@ export default function PackItPage() {
         setItems(newItem)
     };
 
-    // const handleItemChange = (event) => {
-    //     event.persist();
-    // };
-
     const handleListNameChange = (event) => {
         event.persist();
         const newListName = event.target.value

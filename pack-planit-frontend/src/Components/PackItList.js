@@ -9,6 +9,7 @@ export default function PackItList(props) {
             <PackItItem
                 item={item}
                 removeItem={props.removeItem}
+                key={item.id}
             />
         ));
     };
