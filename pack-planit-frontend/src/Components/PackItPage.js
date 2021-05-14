@@ -52,6 +52,7 @@ export default function PackItPage() {
 
     const removeList = () => {
         setItems([]);
+        setLists([]);
     };
 
     return (

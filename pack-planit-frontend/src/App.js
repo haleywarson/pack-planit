@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 
 import "./App.css";
@@ -6,8 +6,32 @@ import "./App.css";
 import LogIt from "./Components/LogIt"
 import Main from "./Components/Main"
 import PackItPage from "./Components/PackItPage"
+import Login from "./Components/Login"
 
 function App() {
+
+    const [user, setUser] = useState({})
+
+    const login = (username) => {
+      return fetch("http://localhost:9393/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          username
+        })
+      })
+      .then((response) => response.json())
+      .then((response) => {
+        if (response.error) {
+          alert(response.error);
+        } else {
+          setUser(response)
+        }
+        return response;
+      });
+    };
 
   return (
     <Router>
@@ -40,7 +64,12 @@ function App() {
             <Route path="/logit">
               <LogIt />
             </Route>
-            <Route path="/">
+            <Route
+              path="/" exact
+              render={(props) => 
+              <Login {...props} login={login} />}
+            />
+            <Route path="/home">
               <Main />
             </Route>
           </Switch>
