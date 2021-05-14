@@ -1,5 +1,8 @@
 Trip.destroy_all
 PackingList.destroy_all 
+User.destroy_all  
+
+User.create(username: "haleyw")
 
 Trip.create([
     {

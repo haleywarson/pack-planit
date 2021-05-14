@@ -7,6 +7,20 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
 
+    if req.path.match(/login/) && req.post?
+      body = JSON.parse(req.body.read)
+      user = User.find_by username: body["username"]
+      if user 
+        return [200, {"Content-Type" => "application/json"}, [user.to_json]]
+      else 
+        return [
+          401, 
+          {"Content-Type" => "application/json"}, 
+          [{error: "No user found"}.to_json]
+        ]
+      end
+    end
+
     if req.path == '/trips' && req.get?
         return [200, {'Content-Type' => 'application/json'}, [{trips: Trip.all}.to_json]]
     elsif req.path.match(/trips/) && req.get?
@@ -54,4 +68,5 @@ class Application
     end 
 
   end
+
 end
