@@ -28,7 +28,7 @@ Pack Planit will help you pack for your next backpacking trip and log past trips
 
 ## Setup
 
-Fork and clone this repo. Run "bundle install" and "shotgun" to run the server. Run "npm start" to run the front end.
+Fork and clone this repo. Run "bundle install" and "shotgun" to run the server. Run "npm install" then "npm start" to run the front end.
 
 ## Features
 
